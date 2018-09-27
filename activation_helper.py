@@ -2,8 +2,7 @@ import numpy as np
 
 
 def sigmoid(x):
-    h = 0.0001
-    return 1/1+np.exp(-x + h)
+    return np.where(x > 0, 1. / (1. + np.exp(-x)), np.exp(x) / (np.exp(x) + np.exp(0)))
 
 
 def tanh(x):
