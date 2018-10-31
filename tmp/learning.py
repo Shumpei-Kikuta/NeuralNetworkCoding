@@ -13,6 +13,7 @@ def read_data(picks_nums: np.ndarray):
     for i in picks_nums:
         file_name = "array{:08d}.csv".format(i)
         with open(file_name, "r", encoding="utf-8") as f:
+            f.readline()
             input_shape = tuple(map(int, f.readline().strip().split(",")))
             y = np.array(list(map(int, f.readline().strip().split(","))))
             x = np.array(list(f.readline().strip()))
