@@ -109,7 +109,7 @@ def define_cost_tensor(mini_batch_size, output_dim, S, Y):
 
 def main(args, _logger, print_cost=True):
     N = args.data_num
-    mini_batch_size = args.minibach_size
+    mini_batch_size = args.minibatch_size
     iteration_num = args.iteration_num
     learning_rate = args.learning_rate
     input_dims, output_dim = read_dimensions()
